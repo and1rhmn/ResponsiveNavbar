@@ -41,7 +41,7 @@ nav {
   width: 21.8%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
 }
 /* a-logo */
 
@@ -55,11 +55,12 @@ nav {
   transition: 0.7s;
 }
 .list a {
+  margin: 0 10px 0;
   text-decoration: none;
   color: black;
 }
 .list a:hover {
-  color: #048853;
+  color: #f9d83f;
 }
 /* a-list */
 /* a-navbar ====================*/
@@ -100,8 +101,8 @@ nav {
 }
 
 /* responsive */
-/* mobile */
-@media screen and (max-width: 576px) {
+/*untuk layar device berukuran kecil*/
+@media screen and (min-width: 450px) and (max-width: 576px) {
   body {
     font-size: 73%;
   }
@@ -128,12 +129,12 @@ nav {
     position: absolute;
     z-index: -1;
     right: 0;
-    top: 65px;
+    top: 100%;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
     width: 70%;
-    height: 80vh;
+    min-height: 80vh;
     transform: translateX(100%);
     background-color: #048853;
   }
@@ -145,5 +146,68 @@ nav {
   .list a:hover {
     color: #048853;
     transition: all 0.6s;
+  }
+}
+
+/*untuk layar device berukuran sedang*/
+@media screen and (min-width: 576px) and (max-width: 786px) {
+  body {
+    font-size: 75%;
+  }
+  nav {
+    justify-content: space-between;
+    background-color: #f9d83f;
+    z-index: 9999;
+  }
+  .logo {
+    width: 39%;
+    justify-content: center;
+  }
+
+  .logo img {
+    width: 25%;
+  }
+
+  .hamburger-menu {
+    display: flex;
+    margin-right: 5px;
+    height: 20px;
+  }
+  .list {
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    top: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 60%;
+    min-height: 65vh;
+    transform: translateX(100%);
+    background-color: #048853;
+  }
+
+  .slide {
+    transform: translateX(0);
+  }
+}
+
+/*untuk layar device berukuran besar*/
+@media screen and (min-width: 786px) {
+  body {
+    font-size: 100%;
+  }
+  /* logo */
+  .logo {
+    width: 30%;
+  }
+  /* a-logo */
+  /* list */
+  .list {
+    width: 50%;
+    justify-content: flex-end;
+  }
+  .list a {
+    margin: 0 10px 0;
   }
 }
